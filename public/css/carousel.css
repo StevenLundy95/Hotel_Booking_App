@@ -8,6 +8,13 @@ body {
   color: #5a5a5a;
 }
 
+.navbar-brand {
+  font-family: cursive;
+  font-size: 22px;
+  cursor: pointer;
+  display: inline-block;
+}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
