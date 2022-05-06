@@ -23,14 +23,11 @@ var specialRouter = require('./routes/special');
 var formRouter = require('./routes/form');
 var form2Router = require('./routes/form2');
 
-
-
-
-
 const alert = require("alert");
 const mysql = require("mysql");
 const db = require("./database");
 const {application} = require("express");
+const _sqlPackage = require("express");
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -398,10 +395,6 @@ app.post('/edit2', function(req,res,next) {
     })
 })
 
-app.use(function (req, res, next) {
-    next(createError(404));
-});
-
 app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
@@ -411,18 +404,5 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-app.get('/special', function(req,res,next) {
-
-    var mysql = require('mysql');
-    var connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'root',
-        database: 'test'
-    });
-    connection.query('UPDATE booking SET WHERE price = ?',req.query.id, function (err, data) {
-        res.redirect('/homepage');
-    })
-})
 
 module.exports = app;

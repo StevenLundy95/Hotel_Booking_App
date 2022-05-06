@@ -1,10 +1,14 @@
 var express = require('express');
+const db = require("../database");
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('map_2', {
-        title: 'Map_2 Page' });
+    const sql = 'SELECT * FROM hotels';
+    db.query(sql, function (err, data, fields) {
+        if (err) throw err;
+        res.render('map_2', {dropdownVals: data });
+    });
 });
-
 module.exports = router;
+
+
