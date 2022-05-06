@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <% title %>
+    </title>
+
+    <link rel="stylesheet" href="themes/stylesheet.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Hotel Booking App</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="register-page" id="register">
+
+
+
+    <h1>Register</h1>
+    <form action="/register" method="post">
+
+        <input type="text" name="fname" placeholder="First Name" id="fname" required>
+        <label for="fname">
+            <i class="fas fa-lock"></i>
+        </label>
+
+        <input type="text" name="lname" placeholder="Last Name" id="lname" required>
+        <label for="lname">
+            <i class="fas fa-lock"></i>
+        </label>
+
+        <input type="text" name="phone" placeholder="Phone No." id="phone" required>
+        <label for="phone">
+            <i class="fas fa-lock"></i>
+        </label>
+
+        <input type="text" name="email" placeholder="Email" id="email" required>
+
+        <label for="username">
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+
+        <label for="password">
+        </label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+
+        <input type="submit" id="register-button" value="register" class="register-button"/>
+    </form>
+    <br>
+    <p><a class="btn btn-secondary" href="/">Click here to Login</a></p>
+    <p><a class="btn btn-secondary" href="/admin">Log in as Admin</a></p>
+
+</div>
+</div>
+</body>
+<script>
+
+    $("#register-button").click(function () {
+
+        // get the values
+        var uname = $('#username').val();
+        var pass = $('#password').val();
+        var email = $('#email').val();
+
+        console.log(uname);
+
+        //send data
+        $.post("/register", {
+            username: uname,
+            password: pass,
+            email: email,
+        })
+            .done(function (data) {
+                // window.location = "/";
+                alert("Success Register");
+            });
+
+    });
+</script>
+</html>

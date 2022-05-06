@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+    <title><% title %></title>
+    <link rel="stylesheet" href="themes/stylesheet.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Hotel Booking App</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+
+
+    <!--    <link rel="stylesheet" href="themes/zCheStyle.css" />-->
+</head>
+<body>
+
+
+
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <div class="col-50">
+                    <h1>Payment</h1>
+
+                    <label for="cname">Name on Card</label>
+                    <input type="text" id="cname" name="cardname" placeholder="Enter name">
+                    <label for="ccnum">Credit card number</label>
+                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                    <label for="expmonth">Exp. Month</label>
+                    <input type="text" id="expmonth" name="expmonth" placeholder="Month">
+
+                    <div class="row">
+                        <div class="col-50">
+                            <label for="exp.year">Exp. Year</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="Enter year">
+                        </div>
+                        <div class="col-50">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="***">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <label>
+        <h1>Shipping address</h1>
+        <div class="container">
+            <div class="form">
+
+                <div class="fields fields--2">
+                    <label class="field">
+                        <span class="field__label" for="firstname">First name</span>
+                        <input class="field__input" type="text" id="firstname" value="" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label" for="lastname">Last name</span>
+                        <input class="field__input" type="text" id="lastname" value="" />
+                    </label>
+                </div>
+                <label class="field">
+                    <span class="field__label" for="address">Address</span>
+                    <input class="field__input" type="text" id="address" />
+                </label>
+                <label class="field">
+                    <span class="field__label" for="country">City/Town</span>
+                    <input class="field__input" type="text" id="country" />
+                </label>
+                <div class="fields fields--3">
+                    <label class="field">
+                        <span class="field__label" for="zipcode">Country</span>
+                        <input class="field__input" type="text" id="zipcode" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label" for="city">Eircode</span>
+                        <input class="field__input" type="text" id="city" />
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </label>
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <div class="col-50">
+                    <h1>Discount Code</h1>
+                    <div class="col-50">
+                        <input type="text" id="Discount Code" name="Discount Code" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+
+    <button onclick="myFunction()">Make Payment</button>
+
+    <script>
+        function myFunction() {
+            alert("Payment Succesful");
+            location.href = "/homepage";
+        }
+    </script>
+
+</div>
+</div>
+</body>
+</html>

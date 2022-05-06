@@ -1,0 +1,165 @@
+@import url('https://fonts.google.com/specimen/Nunito');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito' ,sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #d3edef, #dbc0e3);
+	    -moz-transform: scale(1.2) translate(-10px, 4px);
+-webkit-transform: scale(1.2) translate(-10px, 4px);
+-o-transform: scale(1.2) translate(-10px, 4px);
+-ms-transform: scale(1.2) translate(-10px, 4px);
+transform: scale(1.2) translate(-10px, 4px);
+-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 25px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+-webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+-webkit-column-gap: 10px;
+-moz-column-gap: 10px;
+column-gap: 10px;
+-webkit-column-rule: 1px solid rgba(28,110,164,0.5);
+-moz-column-rule: 1px solid rgba(28,110,164,0.5);
+column-rule: 1px solid rgba(28,110,164,0.5);
+border: 5px solid #39A494;
+background: linear-gradient(rgba(53,160,152,.5), rgba(53,160,152,.9)), url("https://wallpaperaccess.com/full/2427234.jpg") repeat fixed 0 0;
+filter: contrast(130%);
+filter: drop-shadow(4px 10px 100px #000);
+filter: saturate(200%);
+overflow-wrap: anywhere;
+transform: scale(1.00, 1.00);
+}
+.contact-page {
+    max-height: 700px;
+    width: 50%;
+    background: #d3edef;
+    padding: 25px 50px;
+    border-radius: 5px;
+    overflow-y: scroll;
+border: 25px groove #39A494;
+}
+
+.contact-page{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.title{
+    font-size: 30px;
+    font-weight: 500;
+    height: 100%;
+    background-color: #d3edef;
+    vertical-align: text-top;
+    position: fixed;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 8px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.contact-page::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #dc76ed, #9b59b6);
+}
+.title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #dc76ed, #9b59b6);
+}
+.container{
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 50%;
+}
+.contact-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+input{
+    width: calc(100% / 2 - 20px);
+    height: 45px;
+    margin-bottom: 10px;
+    margin: 20px 0 12px 0;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #605ebc;;
+    padding-left: 15px;
+    font-size: 16px;
+    border-color: #9b59b6;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+form{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 14px 0;
+    justify-content: space-between;
+
+    height: 70%;
+    width: 100%;
+
+}
+input:focus {
+    border-color: #9b59b6;
+
+}
+input:valid {
+    border-color: #9b59b6;
+
+}
+label{
+
+}
+form input[type="radio"]{
+    display: none;
+}
+button{
+    height: 45px;
+    margin: 45px 0;
+    height: 100%;
+    width: 100%;
+
+
+}

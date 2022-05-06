@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <% title %>
+    </title>
+    <link rel="stylesheet" href="themes/stylesheet.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Hotel Booking App</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+
+<!--    <link rel="stylesheet" href="themes/zLogStyle.css"/>-->
+</head>
+<body>
+
+<div class="admin-page" id="admin">
+    <h1>Admin</h1>
+    <form action="/admin" method="post">
+        <label for="username">
+            <!-- font awesome icon -->
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+        <label for="password">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <input type="submit" id="admin-button" value="login" class="admin-button"/>
+    </form>
+</div>
+
+<br>
+
+<p><a class="btn btn-secondary" href="/">Log in as a Customer</a></p>
+
+    <script>
+
+        $("#admin").click(function () {
+
+            // Get the values
+            var un = $('#username').val();
+
+            var pw = $('#password').val();
+
+            if (un === '' || pw === '') {
+                alert("Please enter Username, Password");
+            } else {
+
+                // Send the data
+                $.post("/admin", {username: un, password: pw})
+                    .done(function (data) {
+                        alert("Success");
+                        alert(data);
+                    });
+            }
+
+        });
+    </script>
+</body>
+</html>

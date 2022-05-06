@@ -1,0 +1,191 @@
+@import url('https://fonts.google.com/specimen/Nunito');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito' ,sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #d3edef, #dbc0e3);
+    border: 10px #000000;
+    -moz-transform: scale(1.2) translate(-10px, 4px);
+-webkit-transform: scale(1.2) translate(-10px, 4px);
+-o-transform: scale(1.2) translate(-10px, 4px);
+-ms-transform: scale(1.2) translate(-10px, 4px);
+transform: scale(1.2) translate(-10px, 4px);
+-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 25px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+-webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+-webkit-column-gap: 10px;
+-moz-column-gap: 10px;
+column-gap: 10px;
+-webkit-column-rule: 1px solid rgba(28,110,164,0.5);
+-moz-column-rule: 1px solid rgba(28,110,164,0.5);
+column-rule: 1px solid rgba(28,110,164,0.5);
+border: 5px solid #39A494;
+background: linear-gradient(rgba(53,160,152,.5), rgba(53,160,152,.9)), url("https://wallpapersmug.com/u/f39563/tropical-beach-sea-calm-holiday.jpg") repeat fixed 0px 0px;
+filter: contrast(130%);
+filter: drop-shadow(4px 10px 100px #000);
+filter: saturate(200%);
+display: table;
+overflow-wrap: break-word;
+transform: scale(1.00, 1.00);
+}
+.register-page {
+    max-width: 700px;
+    max-height: 730px;
+    height: 100%;
+    width: 100%;
+    background: #d3edef;
+    padding: 25px 50px;
+    border-radius: 5px;
+    margin-bottom: 0%;
+    font-size: 25px;
+border: 25px groove #39A494;
+border-radius: 40px 40px 0px 0px;
+}
+.register-page a{
+    font-size: 15px;
+    padding: 20px 0 0 0;
+    font-weight: 5;
+    position: relative;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.register-page{
+font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.title{
+    font-weight: 500;
+    position: fixed;
+    height: 50%;
+    vertical-align: text-top;
+    font-size: 27.5px;
+    font-weight: 500;
+    background-color: #d3edef;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 9px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.register-page::before{
+content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #dc76ed, #9b59b6);
+}
+.title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #dc76ed, #9b59b6);
+}
+.one{
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 50%;
+}
+.register-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+input{
+    width: calc(100% / 2 - 20px);
+    height: 45px;
+    margin-bottom: 10px;
+    margin: 20px 0 12px 0;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #605ebc;;
+    padding-left: 15px;
+    font-size: 16px;
+    border-color: #9b59b6;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+form{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 14px 0;
+    justify-content: space-between;
+
+    height: 70%;
+    width: 100%;
+
+}
+input:focus {
+    border-color: #9b59b6;
+
+}
+input:valid {
+    border-color: #9b59b6;
+
+}
+label{
+
+}
+ form input[type="radio"]{
+     display: none;
+ }
+ button{
+     height: 45px;
+     margin: 45px 0;
+     height: 100%;
+     width: 100%;
+
+
+ }
+ 
+ @keyframes myAnim {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
