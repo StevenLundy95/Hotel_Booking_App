@@ -390,16 +390,9 @@ app.post('/booking', function (req, res) {
             }
     }
 
-
-
-
-
-
     totalPrice=restPrice+roomPrice+hotelPrice+barPrice;
 
     price=totalPrice;
-
-
 
     var errormessage = "";
 
