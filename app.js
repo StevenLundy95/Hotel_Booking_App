@@ -160,14 +160,261 @@ app.post('/booking', function (req, res) {
     var restaurant = req.body.restaurant;
     var start = req.body.start;
     var end = req.body.end;
-    var price = 100;
+
+    var restPrice = 0;
+    var roomPrice = 0;
+    var hotelPrice = 0;
+    var barPrice = 0;
+    var totalPrice = 0;
+    var price = 0;
+
+
+    if (hotel.includes("Travel Lodge")) {
+        hotelPrice = 40;
+        if (room.includes("Single")) {
+            roomPrice = 0;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 25;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 25;
+                }
+            }
+        }
+
+        else if (room.includes("Double")) {
+            roomPrice = 50;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 25;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 25;
+                }
+
+            }
+        }
+        else if (room.includes("Triple")) {
+            roomPrice = 150;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 25;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 25;
+                }
+
+            }
+        }
+        else if (room.includes("Suite")) {
+            roomPrice = 200;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 25;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 25;
+                }
+
+            }
+        }
+
+    }
+
+    if (hotel.includes('The Generator')) {
+        hotelPrice = 80;
+        if (room.includes("Single")) {
+            roomPrice = 0;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 20;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 20;
+                }
+            }
+        }
+        else if (room.includes("Double")) {
+            roomPrice = 50;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 20;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 20;
+                }
+
+            }
+        } else if (room.includes("Triple")) {
+            roomPrice = 150;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 20;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 20;
+                }
+
+            }
+        } else if (room.includes("Suite")) {
+            roomPrice = 200;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 20;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 20;
+                }
+
+            }
+        }
+
+    }
+
+
+    if (hotel.includes('Jurys Inn')) {
+        hotelPrice = 120;
+        if (room.includes("Single")) {
+            roomPrice = 0;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 15;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 15;
+                }
+            }
+        }
+        else if (room.includes("Double")) {
+            roomPrice = 50;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 15;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 15;
+                }
+
+            }
+        }
+        else if (room.includes("Triple")) {
+            roomPrice = 150;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 15;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 15;
+                }
+
+            }
+        }
+       else if (room.includes("Suite")) {
+            roomPrice = 200;
+            if (bars.length !== ("")) {
+                barPrice = barPrice + 15;
+                if (restaurant.length !== "") {
+                    restPrice = restPrice + 15;
+                }
+
+            }
+        }
+    }
+
+
+
+    if (hotel.includes('The Marlin')) {
+        hotelPrice = 160;
+        if (room.includes("Single")) {
+            roomPrice = 0;
+            if (bars.length !== ("")) {
+                barPrice = 10;
+                if (restaurant.length !== "") {
+                    restPrice = 10;
+                }
+            }
+        }
+
+        else  if (room.includes("Double")) {
+            roomPrice = 50;
+            if (bars.length !== ("")) {
+                barPrice = 10;
+                if (restaurant.length !== "") {
+                    restPrice = 10;
+                }
+
+            }
+        }
+        else  if (room.includes("Triple")) {
+            roomPrice = 150;
+            if (bars.length !== ("")) {
+                barPrice = 10;
+                if (restaurant.length !== "") {
+                    restPrice = 10;
+                }
+
+            }
+        }
+        else if (room.includes("Suite")) {
+            roomPrice = 200;
+            if (bars.length !== ("")) {
+                barPrice = 10;
+                if (restaurant.length !== "") {
+                    restPrice = 10;
+                }
+
+            }
+        }
+    }
+
+    if (hotel.includes('The Marker')) {
+            hotelPrice = 200;
+            if (room.includes("Single")) {
+                roomPrice = 0;
+                if (bars.length !== ("")) {
+                    barPrice = 0;
+                    if (restaurant.length !== "") {
+                        restPrice = 0;
+                    }
+                }
+            }
+
+           else  if (room.includes("Double")) {
+                roomPrice = 50;
+                if (bars.length !== ("")) {
+                    barPrice = 0;
+                    if (restaurant.length !== "") {
+                        restPrice = 0;
+                    }
+
+                }
+            }
+           else  if (room.includes("Triple")) {
+                roomPrice = 150;
+                if (bars.length !== ("")) {
+                    barPrice = 0;
+                    if (restaurant.length !== "") {
+                        restPrice = 0;
+                    }
+
+                }
+            }
+            else if (room.includes("Suite")) {
+                roomPrice = 200;
+                if (bars.length !== ("")) {
+                    barPrice = 0;
+                    if (restaurant.length !== "") {
+                        restPrice = 0;
+                    }
+
+                }
+            }
+    }
+
+
+
+
+
+
+    totalPrice=restPrice+roomPrice+hotelPrice+barPrice;
+
+    price=totalPrice;
+
+
 
     var errormessage = "";
 
-    console.log("hotel = " + hotel);
-    console.log("room = " + room);
-    console.log("bars = " + bars);
-    console.log("restaurant = " + restaurant);
+    console.log("");
+
+    console.log("Hotel = " + hotel);
+    console.log("Room = " + room);
+    console.log("Bar/Nightclub = " + bars);
+    console.log("Restaurant = " + restaurant);
+    console.log("Check in: = " + start);
+    console.log("Check out: = " + end);
+    console.log("Price: = " + price);
+
+    console.log("");
+
 
     if (errormessage.length > 0) {
         res.send(errormessage);
@@ -187,7 +434,7 @@ app.post('/booking', function (req, res) {
         });
         connection.end();
         let alert = require('alert');
-        alert("Booking Confirmed!!")
+        alert("Booking Confirmed!! Your total cost is : " + price + " Euro")
         console.log("Success")
         return res.redirect('/checkout');
     }

@@ -1001,9 +1001,12 @@
 <form action="/booking" method="post">
     <label for="hotel">Choose a hotel:</label>
     <select name="hotel" placeholder="hotel" id="hotel" required>
-        <% for (const i in dropdownVals) { %>
-            <option value="<%= dropdownVals[i].id %>"> <%= dropdownVals[i].name %> </option>
-        <% } %>
+        <option value="">Select Hotel</option>
+        <option value="Travel Lodge">Travel Lodge</option>
+        <option value="The Generator">The Generator</option>
+        <option value="Jurys Inn">Jurys Inn</option>
+        <option value="The Marlin">The Marlin</option>
+        <option value="The Marker">The Marker</option>
     </select>
     <label for="room">Choose a room:</label>
     <select name="room" id="room" placeholder="room" id="room" required>
