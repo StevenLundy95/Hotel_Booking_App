@@ -3,7 +3,6 @@ var express = require('express');
 const path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const ejsLint = require('ejs-lint');
 
 var indexRouter = require('./routes/index');
 var registerRouter = require('./routes/register');
@@ -22,6 +21,7 @@ var loggedInRouter = require('./routes/loggedIn');
 var specialRouter = require('./routes/special');
 var formRouter = require('./routes/form');
 var form2Router = require('./routes/form2');
+var form3Router = require('./routes/form3');
 
 const alert = require("alert");
 const mysql = require("mysql");
@@ -58,6 +58,7 @@ app.use('/loggedIn', loggedInRouter);
 app.use('/special', specialRouter);
 app.use('/form', formRouter);
 app.use('/form2', form2Router);
+app.use('/form3', form3Router);
 
 app.post('/register', function (req, res) {
 
@@ -634,6 +635,72 @@ app.post('/edit2', function(req,res,next) {
         res.redirect('/bookingDisplay');
     })
 })
+
+app.get('/select3', function(req,res,next) {
+    var mysql = require('mysql');
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'test'
+    });
+    connection.query('SELECT * FROM users',req.body,function(err, data) {
+        res.render('select3', {users: data});
+    })
+})
+
+
+app.get('/form3', function(req,res,next) {
+    res.render('/form3')
+})
+
+app.post('/form3', function(req,res,next) {
+
+    var mysql = require('mysql');
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'test'
+    });
+    connection.query('INSERT INTO users SET ?', req.body,function(err, data) {
+        res.send('success');
+    })
+})
+
+app.get('/edit3', function(req,res,next) {
+
+    var mysql = require('mysql');
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'test'
+    });
+    connection.query('SELECT * FROM users WHERE id = ?',req.query.id, function (err, data) {
+        res.render('form3', {users: data});
+    })
+})
+
+app.post('/edit3', function(req,res,next) {
+
+    var mysql = require('mysql');
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'test'
+    });
+    var param =[
+        req.body,
+        req.query.id
+    ]
+    connection.query('UPDATE users SET ? WHERE id = ?',param, function(err, data){
+        res.redirect('/');
+    })
+})
+
+
 
 app.use(function (err, req, res, next) {
     // set locals, only providing error in development
